@@ -3,19 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		587951FE257FF7D60015CFAB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 587951FD257FF7D60015CFAB /* RxCocoa */; };
+		5889EC69257FFA300088D244 /* RepositoriesDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5889EC68257FFA300088D244 /* RepositoriesDataWrapper.swift */; };
+		5889EC6D257FFB100088D244 /* GitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5889EC6C257FFB100088D244 /* GitRouter.swift */; };
+		5889EC71257FFCC30088D244 /* GitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5889EC70257FFCC30088D244 /* GitService.swift */; };
 		58911BBB257FF35E006BEA58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58911BBA257FF35E006BEA58 /* AppDelegate.swift */; };
 		58911BBD257FF35E006BEA58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58911BBC257FF35E006BEA58 /* SceneDelegate.swift */; };
 		58911BBF257FF35E006BEA58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58911BBE257FF35E006BEA58 /* ViewController.swift */; };
 		58911BC2257FF35E006BEA58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58911BC0257FF35E006BEA58 /* Main.storyboard */; };
 		58911BC4257FF362006BEA58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58911BC3257FF362006BEA58 /* Assets.xcassets */; };
 		58911BC7257FF362006BEA58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58911BC5257FF362006BEA58 /* LaunchScreen.storyboard */; };
+		58911BD1257FF61E006BEA58 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 58911BD0257FF61E006BEA58 /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5889EC68257FFA300088D244 /* RepositoriesDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesDataWrapper.swift; sourceTree = "<group>"; };
+		5889EC6C257FFB100088D244 /* GitRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRouter.swift; sourceTree = "<group>"; };
+		5889EC70257FFCC30088D244 /* GitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitService.swift; sourceTree = "<group>"; };
 		58911BB7257FF35E006BEA58 /* GitRepositoriesFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitRepositoriesFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58911BBA257FF35E006BEA58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58911BBC257FF35E006BEA58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				587951FE257FF7D60015CFAB /* RxCocoa in Frameworks */,
+				58911BD1257FF61E006BEA58 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5889EC6B257FFB020088D244 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5889EC6C257FFB100088D244 /* GitRouter.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5889EC6F257FFCB70088D244 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5889EC70257FFCC30088D244 /* GitService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		58911BAE257FF35E006BEA58 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +82,74 @@
 		58911BB9257FF35E006BEA58 /* GitRepositoriesFinder */ = {
 			isa = PBXGroup;
 			children = (
+				5889EC6F257FFCB70088D244 /* Services */,
+				5889EC6B257FFB020088D244 /* API */,
+				58911BDC257FF671006BEA58 /* Resources */,
+				58911BDB257FF667006BEA58 /* Supporting files */,
+				58911BDA257FF65D006BEA58 /* Model */,
+				58911BD9257FF64C006BEA58 /* View */,
+				58911BD8257FF646006BEA58 /* ViewModel */,
 				58911BBA257FF35E006BEA58 /* AppDelegate.swift */,
 				58911BBC257FF35E006BEA58 /* SceneDelegate.swift */,
-				58911BBE257FF35E006BEA58 /* ViewController.swift */,
-				58911BC0257FF35E006BEA58 /* Main.storyboard */,
-				58911BC3257FF362006BEA58 /* Assets.xcassets */,
-				58911BC5257FF362006BEA58 /* LaunchScreen.storyboard */,
-				58911BC8257FF362006BEA58 /* Info.plist */,
 			);
 			path = GitRepositoriesFinder;
+			sourceTree = "<group>";
+		};
+		58911BD8257FF646006BEA58 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		58911BD9257FF64C006BEA58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58911BDE257FF690006BEA58 /* Storyboards */,
+				58911BDD257FF685006BEA58 /* Cells */,
+				58911BBE257FF35E006BEA58 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58911BDA257FF65D006BEA58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5889EC68257FFA300088D244 /* RepositoriesDataWrapper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58911BDB257FF667006BEA58 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				58911BC8257FF362006BEA58 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		58911BDC257FF671006BEA58 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				58911BC3257FF362006BEA58 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		58911BDD257FF685006BEA58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		58911BDE257FF690006BEA58 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				58911BC0257FF35E006BEA58 /* Main.storyboard */,
+				58911BC5257FF362006BEA58 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +168,10 @@
 			dependencies = (
 			);
 			name = GitRepositoriesFinder;
+			packageProductDependencies = (
+				58911BD0257FF61E006BEA58 /* Moya */,
+				587951FD257FF7D60015CFAB /* RxCocoa */,
+			);
 			productName = GitRepositoriesFinder;
 			productReference = 58911BB7257FF35E006BEA58 /* GitRepositoriesFinder.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +199,10 @@
 				Base,
 			);
 			mainGroup = 58911BAE257FF35E006BEA58;
+			packageReferences = (
+				58911BCF257FF61E006BEA58 /* XCRemoteSwiftPackageReference "Moya" */,
+				587951FC257FF7D60015CFAB /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 58911BB8257FF35E006BEA58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,9 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5889EC71257FFCC30088D244 /* GitService.swift in Sources */,
 				58911BBF257FF35E006BEA58 /* ViewController.swift in Sources */,
 				58911BBB257FF35E006BEA58 /* AppDelegate.swift in Sources */,
 				58911BBD257FF35E006BEA58 /* SceneDelegate.swift in Sources */,
+				5889EC6D257FFB100088D244 /* GitRouter.swift in Sources */,
+				5889EC69257FFA300088D244 /* RepositoriesDataWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +384,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45JNFF5WM9;
-				INFOPLIST_FILE = GitRepositoriesFinder/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GitRepositoriesFinder/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +403,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45JNFF5WM9;
-				INFOPLIST_FILE = GitRepositoriesFinder/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GitRepositoriesFinder/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,6 +437,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		587951FC257FF7D60015CFAB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		58911BCF257FF61E006BEA58 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		587951FD257FF7D60015CFAB /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 587951FC257FF7D60015CFAB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		58911BD0257FF61E006BEA58 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58911BCF257FF61E006BEA58 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58911BAF257FF35E006BEA58 /* Project object */;
 }
