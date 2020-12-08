@@ -11,6 +11,7 @@
 		5889EC69257FFA300088D244 /* RepositoriesDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5889EC68257FFA300088D244 /* RepositoriesDataWrapper.swift */; };
 		5889EC6D257FFB100088D244 /* GitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5889EC6C257FFB100088D244 /* GitRouter.swift */; };
 		5889EC71257FFCC30088D244 /* GitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5889EC70257FFCC30088D244 /* GitService.swift */; };
+		5889EC74257FFEB70088D244 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5889EC73257FFEB70088D244 /* RepositoriesViewModel.swift */; };
 		58911BBB257FF35E006BEA58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58911BBA257FF35E006BEA58 /* AppDelegate.swift */; };
 		58911BBD257FF35E006BEA58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58911BBC257FF35E006BEA58 /* SceneDelegate.swift */; };
 		58911BBF257FF35E006BEA58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58911BBE257FF35E006BEA58 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		5889EC68257FFA300088D244 /* RepositoriesDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesDataWrapper.swift; sourceTree = "<group>"; };
 		5889EC6C257FFB100088D244 /* GitRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRouter.swift; sourceTree = "<group>"; };
 		5889EC70257FFCC30088D244 /* GitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitService.swift; sourceTree = "<group>"; };
+		5889EC73257FFEB70088D244 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		58911BB7257FF35E006BEA58 /* GitRepositoriesFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitRepositoriesFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58911BBA257FF35E006BEA58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58911BBC257FF35E006BEA58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		58911BD8257FF646006BEA58 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5889EC73257FFEB70088D244 /* RepositoriesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				5889EC71257FFCC30088D244 /* GitService.swift in Sources */,
 				58911BBF257FF35E006BEA58 /* ViewController.swift in Sources */,
 				58911BBB257FF35E006BEA58 /* AppDelegate.swift in Sources */,
+				5889EC74257FFEB70088D244 /* RepositoriesViewModel.swift in Sources */,
 				58911BBD257FF35E006BEA58 /* SceneDelegate.swift in Sources */,
 				5889EC6D257FFB100088D244 /* GitRouter.swift in Sources */,
 				5889EC69257FFA300088D244 /* RepositoriesDataWrapper.swift in Sources */,
@@ -392,7 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vit.GitRepositoriesFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -411,7 +415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vit.GitRepositoriesFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

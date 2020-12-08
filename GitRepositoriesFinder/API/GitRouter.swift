@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum GitRouter {
-    case searchRepositories(name: String, page: Int)
+    case searchRepositories(name: String, page: UInt)
 }
 
 // MARK: - router target type protocol

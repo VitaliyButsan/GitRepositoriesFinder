@@ -16,7 +16,7 @@ class GitService {
     var response = PublishSubject<Response?>()
     var isCompleted = BehaviorRelay<Bool>(value: false)
     
-    func searchRepositories(name: String, pages: Int) {
+    func searchRepositories(name: String, pages: UInt) {
         let group = DispatchGroup()
         
         for page in 1...pages {

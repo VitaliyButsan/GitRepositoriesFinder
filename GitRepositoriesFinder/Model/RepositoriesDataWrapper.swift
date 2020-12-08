@@ -13,10 +13,12 @@ struct RepositoriesDataWrapper: Decodable {
 
 struct Repository: Decodable {
     let name: String?
+    let owner: Owner
     let stars: Int
     
     enum CodingKeys: String, CodingKey {
         case name
+        case owner
         case stars = "stargazers_count"
     }
 }
