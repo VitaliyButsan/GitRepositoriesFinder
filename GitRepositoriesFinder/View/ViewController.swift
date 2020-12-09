@@ -6,14 +6,21 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class ViewController: UIViewController {
+class RepositoriesViewController: UIViewController {
+    
+    private let viewModel = RepositoriesViewModel()
+    private let disposeBag = DisposeBag()
+    private let searchController = UISearchController(searchResultsController: nil)
+    private var searchBar: UISearchBar { searchController.searchBar }
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
 }
 

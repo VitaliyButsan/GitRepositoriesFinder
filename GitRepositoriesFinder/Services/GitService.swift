@@ -26,6 +26,7 @@ class GitService {
                 
                 switch result {
                 case .success(let response):
+                    print("Success!")
                     group.leave()
                     self.response.onNext(response)
                 case .failure(let error):

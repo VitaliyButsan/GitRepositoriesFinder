@@ -16,6 +16,7 @@ class RepositoriesViewModel {
     private var localRepositories = [Repository]()
     let inputQuery = BehaviorRelay<String>(value: "")
     var outputRepositories = BehaviorRelay<[Repository]>(value: [])
+    var completed = false
     
     init() {
         subscribeObservables()
@@ -23,11 +24,12 @@ class RepositoriesViewModel {
     
     private func subscribeObservables() {
         inputQuery
-            .throttle(.milliseconds(400), latest: true, scheduler: MainScheduler.instance)
+            .throttle(.milliseconds(500), latest: true, scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] query in
                 guard let self = self else { return }
-                if query.count > 3 {
+                if query.count > 3, self.completed {
+                    self.completed.toggle()
                     self.searchRepositories(name: query)
                 } else {
                     self.outputRepositories.accept([])
@@ -55,6 +57,7 @@ class RepositoriesViewModel {
         gitService.isCompleted
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
+                self.completed.toggle()
                 self.localRepositories.sort { $0.stars > $1.stars }
                 self.outputRepositories.accept(self.localRepositories)
             })
